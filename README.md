@@ -14,3 +14,6 @@
 
 Пример запроса на получение данных текущего авторизованного пользователя
 ![profile](https://github.com/user-attachments/assets/edbdf64f-47f8-4847-ba50-ab62b05c55df)
+
+Также была оформлена документация API через postman
+![image](https://github.com/user-attachments/assets/4c55b382-a224-402b-bd58-767309274067)
