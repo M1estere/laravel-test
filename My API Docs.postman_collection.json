@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "43a4fdfa-a0e6-4e03-8d4c-298b405ecff7",
+		"name": "My API Docs",
+		"description": "Этот API предоставляет функциональность для управления пользователями, включая регистрацию, аутентификацию и получение информации о профиле. Он позволяет создавать новых пользователей, входить в систему и получать данные о текущем пользователе",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33507230"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user@example.com\",\r\n    \"password\": \"password123\",\r\n    \"gender\": \"male\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/registration",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"registration"
+					]
+				},
+				"description": "Этот запрос выполняет регистрацию нового пользователя.  \nНеобходимо предоставить email, пароль и пол.  \nУспешный ответ вернет объект пользователя и токен аутентификации."
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user@example.com\",\r\n    \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Этот запрос выполняет вход в систему для пользователя.  \nНеобходимо предоставить email и пароль.  \nУспешный ответ вернет объект пользователя и токен аутентификации"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Этот запрос получает информацию о текущем пользователе.  \nНеобходимо передать токен аутентификации в заголовке"
+			},
+			"response": []
+		}
+	]
+}
